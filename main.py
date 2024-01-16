@@ -1,3 +1,4 @@
-import osszegzes
+#import osszegzes
 
-osszegzes.elso()
+
+#osszegzes.elso()
