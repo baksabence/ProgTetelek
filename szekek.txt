@@ -1,0 +1,4 @@
+Szín$Lábszám
+Kék$3
+Piros$4
+Zöld$5

@@ -3,15 +3,22 @@ from Szek import Szek
 peldany = Szek("kék", 3)
 peldanyketto = Szek("piros", 4)
 peldanyharom = Szek("zöld", 5)
-print(peldany.__str__())
-print(peldanyketto)
-print(peldanyharom)
+
 
 szekek = [peldany, peldanyketto, peldanyharom]
 
+def peldanyokListaban():
+    peldany = Szek("kék", 3)
+    peldanyketto = Szek("piros", 4)
+    peldanyharom = Szek("zöld", 5)
+    szekek = [peldany, peldanyketto, peldanyharom]
+    return szekek
 
 
-def labakSzama():
+
+szekLista = peldanyokListaban()
+
+def osszegzesTetele(szekek):
     print("\nÖsszesen hány db láb van a teremben?", end="")
     ossz = 0
     for index in range(0, len(szekek), 1):
@@ -19,10 +26,9 @@ def labakSzama():
 
     print(f"\n\tÖsszesen {ossz} láb van a teremben")
 
-labakSzama()
 
-# összegzés tétele
-def maxLabSzin():
+
+def maxKivalasztasTetele(szekek):
     maxIndex = 0
     print("\nMelyik színű széknek van a legtöbb lába?")
     for index in range(0, len(szekek), 1):
@@ -30,11 +36,10 @@ def maxLabSzin():
             maxIndex = index
 
     print(f"\tA legtöbb lábbal rendelkező szék színe: {szekek[maxIndex].szin}")
-maxLabSzin()
 
-# maximum kiválasztás tétel
 
-def negynelNagyobb():
+
+def megszamlalasTetele(szekek):
     print("\nHány négynél több lábú szék van: ")
     db = 0
     for index in range(0, len(szekek), 1):
@@ -43,14 +48,10 @@ def negynelNagyobb():
     print(f"\tA négynél több lábú székek száma : {db}")
 
 
-negynelNagyobb()
-
-
-# megszámlálás tétele
 
 
 
-def pirosNegylabu():
+def eldontesTetele(szekek):
     print("\n Van-e piros négy lábú szék: ")
     van = False
     for index in range(0, len(szekek), 1):
@@ -62,4 +63,31 @@ def pirosNegylabu():
         print("nincs")
 
 
-pirosNegylabu()
+
+
+
+
+def listakiir(lista):
+    for index in range(0, len(lista), 1):
+        print(szekek[index])
+
+
+# rovid verzio
+listakiir(peldanyokListaban())
+
+
+# hosszu verzio
+
+
+osszegzesTetele(szekLista)
+maxKivalasztasTetele(szekLista)
+megszamlalasTetele(szekLista)
+eldontesTetele(szekLista)
+
+
+listakiir(szekLista)
+
+
+
+
+

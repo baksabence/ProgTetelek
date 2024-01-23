@@ -2,7 +2,7 @@ def szekinit(szin: str, labszam: int):
     print(f"szin: {szin}, lábszám: {labszam}")
 
 szekinit("kék", 3)
-szekinit("prios", 4)
+szekinit("piros", 4)
 szekinit("zöld", 5)
 
 def szekstr(szin: str, labszam: int):
