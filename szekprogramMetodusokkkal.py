@@ -67,6 +67,7 @@ def eldontesTetele(szekek):
 
 
 
+
 def listakiir(lista):
     for index in range(0, len(lista), 1):
         print(szekek[index])
